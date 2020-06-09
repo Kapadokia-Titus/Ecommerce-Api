@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table(name = "user")
 public class User {
 
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
@@ -35,7 +36,8 @@ public class User {
     @JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore
     private Cart cart;
-	
+
+
 	public Cart getCart() {
 		return cart;
 	}
